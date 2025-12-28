@@ -1,0 +1,270 @@
+<?php
+// dtbosshub.com - Mobile Landing Page Template
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DT Boss Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Optional Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: #111827;
+            background: #f3f4f6;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            background: radial-gradient(circle at top, #f9fafb, #e5e7eb);
+        }
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .card-wrapper {
+            width: 100%;
+            max-width: 420px;
+            padding: 18px 14px 26px;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 26px 18px 24px;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.10);
+            border: 1px solid #e5e7eb;
+            text-align: center;
+        }
+
+        /* Logo */
+        .logo-circle {
+            height: 120px;
+            width: 120px;
+            margin: 0 auto 14px;
+            border-radius: 999px;
+            background: radial-gradient(circle at top, #ffffff, #f1f5f9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12);
+        }
+        .logo-circle img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 999px;
+            object-fit: contain;
+        }
+
+        /* Title + subtitle */
+        .title-main {
+            font-size: 1.7rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            margin: 2px 0 6px;
+        }
+        .subtitle {
+            font-size: 0.92rem;
+            color: #4b5563;
+            margin-bottom: 18px;
+        }
+
+        /* Button */
+        .btn-main {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 26px;
+            border-radius: 999px;
+            border: none;
+            text-decoration: none;
+            background: #ef4444;
+            color: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.55);
+            animation: pulse 1.8s infinite;
+        }
+        .btn-main span {
+            margin-left: 6px;
+            font-size: 1.1rem;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.55);
+            }
+            70% {
+                transform: scale(1.03);
+                box-shadow: 0 0 0 16px rgba(239, 68, 68, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+            }
+        }
+
+        .divider {
+            height: 1px;
+            width: 70%;
+            margin: 18px auto;
+            background: linear-gradient(to right, transparent, #e5e7eb, transparent);
+        }
+
+        /* Boxes */
+        .section-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .section-sub {
+            font-size: 0.8rem;
+            color: #9ca3af;
+            margin-bottom: 10px;
+        }
+        .box-grid {
+            display: grid;
+            gap: 8px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            margin-bottom: 16px;
+        }
+        .chip {
+            padding: 9px 4px;
+            border-radius: 12px;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: none;
+            box-shadow: 0 4px 8px rgba(15, 23, 42, 0.03);
+        }
+
+        /* Images */
+        .images-section {
+            margin: 10px 0 10px;
+        }
+        .images-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #6b7280;
+            margin-bottom: 8px;
+        }
+        .image-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .image-stack img {
+            width: 100%;
+            border-radius: 16px;
+            object-fit: cover;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+        }
+
+        /* Bottom text */
+        .bottom-wrap {
+            margin-top: 18px;
+        }
+        .bottom-title {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #16a34a, #22c55e);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+        .bottom-note {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            margin-top: 4px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 4px 12px 16px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #9ca3af;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+
+    <div class="card-wrapper">
+        <div class="card">
+
+            <!-- Logo -->
+            <div class="logo-circle">
+                <!-- Upload logo as public_html/logo.png -->
+                <img src="logo.png" alt="DT Boss Hub Logo">
+            </div>
+
+            <!-- Title (edit this text to your preferred branding) -->
+            <h1 class="title-main"><Data>Mod Apk Seller</Data></h1>
+
+            <!-- Subtitle (Hindi line) -->
+            <p class="subtitle">
+                👇 मॉड ऐप लेने के लिए अभी टेलीग्राम जॉइन करें 👇
+            </p>
+
+            <!-- Join Telegram button (replace # with your Telegram link) -->
+            <a href="https://t.me/modapksales" class="btn-main">
+                Join Telegram Now
+                <span>↗</span>
+            </a>
+
+            <div class="divider"></div>
+
+            <!-- Available items -->
+            <div>
+                <div class="section-title">Available Items</div>
+                <div class="section-sub">All are working excellent</div>
+                <div class="box-grid">
+                    <div class="chip">91Club</div>
+                    <div class="chip">DiuWin</div>
+                    <div class="chip">BDG</div>
+                    <div class="chip">Jalwa</div>
+                    <div class="chip">TashanWin</div>
+                    <div class="chip">OkWin</div>
+                    <div class="chip">82Lottery</div>
+                    <div class="chip">Sikkim</div>
+                    <div class="chip">55Club</div>
+                    <div class="chip">Goa Game</div>
+                    <div class="chip">Big Mumbai</div>
+                    <div class="chip">Lottery7</div>
+                    <div class="chip">66Lottery</div>
+                    <div class="chip">IN999</div>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <!-- Bottom big text -->
+            <div class="bottom-wrap">
+                <div class="bottom-title">100% Working</div>
+                <div class="bottom-note">
+                    All hacks are paid &amp; working. No guarantees are implied; use responsibly.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; <?php echo date('Y'); ?> dtbosshub.com. All rights reserved.
+    </div>
+</div>
+</body>
+</html>
